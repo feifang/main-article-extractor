@@ -1,0 +1,16 @@
+{
+  "name": "Main Article Reader",
+  "description": "Extracts the main article and more.",
+  "version": "0.1",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["js/background.js", "lib/jquery.min.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Extracts the main article"
+  },
+  "manifest_version": 2
+}
