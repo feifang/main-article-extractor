@@ -4,9 +4,8 @@ Modified from https://chromium.googlesource.com/chromium/src/+/master/chrome/com
 
 // Called when the user clicks on the browser action.
 chrome.browserAction.onClicked.addListener(function(tab) {
-  // alert('Extracting main article of ' + tab.url + ' for you.');
   chrome.tabs.executeScript(null, {
-    file: "lib/jquery.min.js" // load jquery 
+    file: "lib/jquery.min.js" // load jquery on demand
   }, function() {
     chrome.tabs.executeScript(null, {
       file: "js/extractor.js" // path should start from root
