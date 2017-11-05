@@ -13,5 +13,6 @@
   "browser_action": {
     "default_title": "Extracts the main article"
   },
+  "web_accessible_resources": ["audio.png"],
   "manifest_version": 2
 }
