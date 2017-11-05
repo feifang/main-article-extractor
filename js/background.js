@@ -5,10 +5,13 @@ Modified from https://chromium.googlesource.com/chromium/src/+/master/chrome/com
 // Called when the user clicks on the browser action.
 chrome.browserAction.onClicked.addListener(function(tab) {
   chrome.tabs.executeScript(null, {
-    file: "lib/jquery.min.js" // load jquery on demand
+    file: "lib/jquery.min.js" // load jQuery on demand
   }, function() {
-    chrome.tabs.executeScript(null, {
+    chrome.tabs.executeScript(null, { // extract main article
       file: "js/extractor.js" // path should start from root
+    });
+    chrome.tabs.executeScript(null, { // enable English word translation
+      file: "js/translater.js"
     });
   });
 });

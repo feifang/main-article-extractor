@@ -30,7 +30,7 @@ function appendMainArticle(data) {
 
 function runPaginator() {
   var body = $("body"),
-    article = $('#mainArticle');
+    article = $("#mainArticle");
   var PAGINATIONHEIGHT = 60;
   var screenHeight = window.innerHeight,
     articleLength = article.outerHeight(),
@@ -44,7 +44,7 @@ function runPaginator() {
   addPagination();
   // append a blank page, to make up for the last page
   var blankPage = $("<div></div>");
-  blankPage.css('height', articleHeight);
+  blankPage.css("height", articleHeight);
   article.append(blankPage);
 
   function addPagination() {

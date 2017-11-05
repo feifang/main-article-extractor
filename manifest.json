@@ -3,7 +3,8 @@
   "description": "Extracts the main article and more.",
   "version": "0.1",
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "https://api.shanbay.com/*"
   ],
   "background": {
     "scripts": ["js/background.js"],
