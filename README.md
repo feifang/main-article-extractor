@@ -11,16 +11,20 @@ A chrome extension that extracts the main article for you.
 
 1. Main article extraction
 
-Before:
-<br>
-![](/img/before.png)
+**Before:**<br>
 
-After (support iPad and iPhone):
-<br>
-![](/img/after_ipad.png)
-<br>
-![](/img/after_iphone.png)
+![before extraction](/img/before.png)
+
+**After (support desktop, iPad and iPhone):**<br>
+
+iPad:<br>
+
+![ipad after extraction](/img/after_ipad.png)
+
+iPhone:<br>
+
+![iphone after extraction](/img/after_iphone.png)
 
 2. Word translation
-<br>
-![](/img/translation.png)
+
+![word translation](/img/translation.png)
