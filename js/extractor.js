@@ -16,6 +16,7 @@ $(function() {
     success: function(data) {
       appendMainArticle(data);
       runPaginator();
+      customizedExtraction();
     }
   })
 
@@ -54,7 +55,7 @@ $(function() {
       var totalPages = Math.ceil(parseInt(articleLength) / parseInt(articleHeight));
       for (var i = 1; i <= totalPages; i++) {
         var pageIndex = $("<a>" + i + "</a>");
-        pageIndex.css("padding", "0.2em 0.5em").css("margin", "1.5px").css("background", "rgba(153, 153, 153, 0.11)");
+        pageIndex.css("padding", "0.2em 0.45em").css("margin", "1.5px").css("border-radius", "1em").css("border", "solid 1px rgba(153, 153, 153, 0.3)");
         pagination.append(pageIndex);
       }
       pagination.css("text-align", "center").css("line-height", "40px");
@@ -71,7 +72,17 @@ $(function() {
       var article = document.getElementById("mainArticle");
       article.scrollTop = (pageIndex - 1) * parseInt(article.offsetHeight);
     }
+  }
 
+  // further cleansing of the guardian articles
+  function customizedExtraction() {
+    $("aside.element--thumbnail").remove();
+    setTimeout(function() { // remove js injected ads
+      $(".js-ad-slot").remove();
+    }, 3000);
+    $("#pagination").click(function() { // double checks on removing js injected ads
+      $(".js-ad-slot").remove();
+    });
   }
 
 });
